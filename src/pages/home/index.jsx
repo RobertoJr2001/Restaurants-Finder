@@ -1,5 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import TextField, { Input } from '@material/react-text-field';
 
-import { Container } from './styles'
+import logo from '../../assets/logo.svg';
 
-export default () => <Container>Hello World!</Container>;
+import { Container, Search } from './styles'
+
+export default () => {
+  const [ inputValue, setInputValue] = useState('');
+ 
+ return (
+    <Container>
+      <Search>
+        <img src={logo} alt="Restaurant Logo" />
+        <TextField
+            label='Search'
+            outlined
+            // onTrailingIconSelect={() => this.setState({value: ''})}
+            // trailingIcon={<MaterialIcon role="button" icon="delete"/>}
+          >
+            <Input
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)} />
+          </TextField>
+      </Search>
+    </Container>
+ )
+};
