@@ -11,6 +11,7 @@ export const Container = styled.aside`
   width: 360px;
   height: 100vh;
   overflow-y: auto;
+  overflow-x: hidden;
 `;
 
 export const Logo = styled.img`
@@ -26,8 +27,6 @@ export const Search = styled.section`
 `;
 
 export const Map = styled.div`
-  background-color: red;
-  width: 100vh;
 `;
 
 export const Carousel = styled(Slider)`

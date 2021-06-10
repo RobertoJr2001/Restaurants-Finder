@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Slider from 'react-slick';
 import TextField, { Input } from '@material/react-text-field';
 import MaterialIcon from '@material/react-material-icon';
 
@@ -35,7 +34,7 @@ export default () => {
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)} />
             </TextField>
-            <CarouselTitle>Na seu Área</CarouselTitle>
+            <CarouselTitle>Local Restaurants</CarouselTitle>
             <Carousel {...settings}>
               <Card photo={restaurant} title="Restaurant name" />
               <Card photo={restaurant} title="Restaurant name" />
